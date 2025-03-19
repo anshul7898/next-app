@@ -8,9 +8,9 @@ const Users = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        let requestUrl = "https://dummyjson.com/users";
-        let response = await fetch(requestUrl);
-        let responseDataJSON = await response.json();
+        const requestUrl = "https://dummyjson.com/users";
+        const response = await fetch(requestUrl);
+        const responseDataJSON = await response.json();
         console.log(responseDataJSON.users);
         setUserData(responseDataJSON.users);
       } catch (e) {
